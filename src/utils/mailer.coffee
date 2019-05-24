@@ -33,7 +33,7 @@ MIN_DURATION_OF_REPORT_STRANG_MSG =  10 * 60 * 1000
 
 sendWebsiteContact = (msgBody)->
   debuglog "[sendBotChecker] start. "
-  to = "2456567972@qq.com"
+  to = "contact@geop.org"
   subject = "Msg from #{msgBody.name || ''} at #{new Date}"
 
   textBody = """
@@ -46,8 +46,6 @@ From  : #{msgBody.name || 'unkonwn'}
 Email : #{msgBody.email || ''}
 
 Phone : #{msgBody.phone || ''}
-
-Interest : #{msgBody.interest || ''}
 
 Country : #{msgBody.country || ''}
 
