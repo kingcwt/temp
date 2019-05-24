@@ -5,19 +5,17 @@
 
 html{
     width: 100%;
+    height: 100%;
 
 }
 body {
     box-sizing: border-box;
-
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: url(../images/bg.jpeg) no-repeat;
-    /*background-size: 100% 100%;*/
 }
 body .mmbg{
     background: url("../images/bg.jpeg") no-repeat;
@@ -38,7 +36,6 @@ header img {
 }
 
 .btnBox{
-    /*width: 100%;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,6 +189,18 @@ main div a:hover{
 .markOutBox .Box .Box_btnbox{
     padding-top: 15px;
 }
+.markOutBox .Box .alert_s{
+
+    display: none;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    text-align: center;
+    padding: 10px;
+    margin: 12px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
 .markOutBox .Box .Box_btnbox button{
     cursor: pointer;
     outline: none;
@@ -231,7 +240,7 @@ main div a img.d3{
 }
 @media only screen and (max-width: 700px) {
     header img {
-        width: 51%;
+        width: 66%;
         height: 39%;
     }
     main div a img.d3{

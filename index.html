@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>BitTemple</title>
     <link rel="stylesheet" href="./css/index.css">
+    <!--<link rel="stylesheet" href="./css/bootstrap.css">-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </head>
 <body>
@@ -67,6 +68,7 @@
 
        </main>
        <div class="markOutBox">
+
            <p class="markBg"></p>
            <div class="Box">
 
@@ -83,18 +85,30 @@
                <p class="pp"><input type="text" placeholder='产品名称 Product Name'></p>
 
                <textarea  placeholder="请输入你的需求 What’s your requirement" name="" id="" cols="30" rows="10"></textarea>
-               <p class="Box_btnbox"><button>提交(Submit)</button></p>
+               <p class="Box_btnbox"><button id="submit">提交(Submit)</button></p>
+               <div  class="alert_s">
+                   提交成功！
+               </div>
                <p class="delBox"><img src="./images/del.png" alt=""></p>
            </div>
        </div>
 
    </div>
+
 </body>
 </html>
 <script>
     let del=document.getElementsByClassName('delBox')[0];
     let outMark=document.getElementsByClassName('markOutBox')[0];
     let btnBox=document.getElementsByClassName('btnBox')[0];
+    let aler=document.getElementsByClassName('alert_s')[0];
+    let submit=document.getElementById('submit');
     del.onclick=()=>outMark.style.display='none';
     btnBox.onclick=()=>outMark.style.display='block';
+    submit.onclick=()=>{
+        aler.style.display='block';
+        setTimeout(()=>{
+            aler.style.display='none';
+        },1250)
+    }
 </script>
