@@ -1,0 +1,23 @@
+
+{
+  "apps" : [
+    {
+      "name"      : "geop-website",
+      "script"  : "./lib/server.min.js",
+      "cwd" : "/var/www/apps/geop-website/current/",
+      error_file : "./log/err.log",
+      out_file : "./log/out.log",
+      "merge_logs"  : true,
+      "args" : "-e production",
+      "env": {
+        COMMON_VARIABLE: "true",
+        "NODE_ENV": "production"
+      },
+      env_production : {
+        NODE_ENV: "production"
+      }
+    }
+  ]
+}
+
+

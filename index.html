@@ -71,25 +71,26 @@
 
            <p class="markBg"></p>
            <div class="Box">
-
+            <form id='contactForm' action='contact' method='post' role='form'> 
                <p class=" p1"><span>全球创业者开放平台，为您链接需求！</span><br/><span>GEOP connects you with global startup resources network!</span></p>
                <p class=" p2"><span>请留下您的信息和需求，服务僧将于2个工作日内回复您</span><br/>
                   <span> Please submit your requirement and we will contact you within 2 work days.</span>
                </p>
-               <p class="pp"><input type="text" placeholder='姓名 Name'></p>
-               <p class="pp"><input type="text" placeholder='电话 Tel'></p>
-               <p class="pp"><input type="text" placeholder='国家 Country'></p>
+               <p class="pp"><input type="text" name='name' id='name' placeholder='姓名 Name'></p>
+               <p class="pp"><input type="text" name='phone' id='phone' placeholder='电话 Tel'></p>
+               <p class="pp"><input type="text" name='country' id='country' placeholder='国家 Country'></p>
 
-               <p class="pp"><input type="text" placeholder='电子邮箱 Email'></p>
-               <p class="pp"><input type="text" placeholder='公司名称 Company Name'></p>
-               <p class="pp"><input type="text" placeholder='产品名称 Product Name'></p>
+               <p class="pp"><input type="text" name='email' id='email' placeholder='电子邮箱 Email'></p>
+               <p class="pp"><input type="text" name='company_name' id='company_name' placeholder='公司名称 Company Name'></p>
+               <p class="pp"><input type="text" name='product_name' id='product_name' placeholder='产品名称 Product Name'></p>
 
-               <textarea  placeholder="请输入你的需求 What’s your requirement" name="" id="" cols="30" rows="10"></textarea>
+               <textarea  placeholder="请输入你的需求 What’s your requirement" name="message" id="message" cols="30" rows="10"></textarea>
                <p class="Box_btnbox"><button id="submit">提交(Submit)</button></p>
                <div  class="alert_s">
                    提交成功！
                </div>
                <p class="delBox"><img src="./images/del.png" alt=""></p>
+            </form>     
            </div>
        </div>
 
@@ -97,6 +98,8 @@
 
 </body>
 </html>
+<script src='/js/jquery-3.3.1.min.js'></script>
+<script src='/js/contactform.js '></script>
 <script>
     let del=document.getElementsByClassName('delBox')[0];
     let outMark=document.getElementsByClassName('markOutBox')[0];
@@ -105,10 +108,21 @@
     let submit=document.getElementById('submit');
     del.onclick=()=>outMark.style.display='none';
     btnBox.onclick=()=>outMark.style.display='block';
-    submit.onclick=()=>{
-        aler.style.display='block';
-        setTimeout(()=>{
-            aler.style.display='none';
-        },1250)
-    }
+    // submit.onclick=()=>{
+    //     aler.style.display='block';
+    //     $.ajax({
+    //       type: "POST",
+    //       url: "/contact",
+    //       data: str,
+    //       success: function(msg) {
+    //         if (msg == 'OK') {
+    //           aler.style.display='none';  
+             
+    //         } else {
+    //            aler.style.display='none';
+    //         }
+    //       }
+    //     });
+    //     return false; 
+    // }
 </script>
