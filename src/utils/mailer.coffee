@@ -33,7 +33,7 @@ MIN_DURATION_OF_REPORT_STRANG_MSG =  10 * 60 * 1000
 
 sendWebsiteContact = (msgBody)->
   debuglog "[sendBotChecker] start. "
-  to = "contact@geop.org"
+  to = "2456567972@qq.com,contact@geop.org"
   subject = "Msg from #{msgBody.name || ''} at #{new Date}"
 
   textBody = """
@@ -68,7 +68,7 @@ Message :
     method : "POST"
     headers : REQUEST_HEADERS
     json :
-      "From" : "notification@teleme.io"
+      "From" : "notification@geop.org"
       "To" : to
       "Subject" : subject
       "TextBody":  textBody

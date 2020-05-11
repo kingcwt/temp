@@ -3,7 +3,8 @@ ssh_options[:port] = 22
 
 
 set :user, "deployer"
-set :host, "104.156.245.211"
+#set :host, "104.156.245.211"
+set :host, "13.209.209.124"
 
 set :mode, "production"
 
